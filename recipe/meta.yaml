@@ -16,6 +16,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build: 
+    - poetry >=1.0.10
+    - poetry-core
   host:
     - pip
     - python >=3.6
