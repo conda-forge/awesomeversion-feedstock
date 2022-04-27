@@ -1,5 +1,5 @@
 {% set name = "awesomeversion" %}
-{% set version = "22.4.0" %}
+{% set version = "22.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/awesomeversion-{{ version }}.tar.gz
-  sha256: f349b86a280b1536a5e0d21c63273ba70dd2c31b775e828d8cdbc8f3ce54a5be
+  sha256: 46c08ddb5b0cc0a68b0d568729e5c9db8042a1b0bcd32f307094db410bf0ed6b
 
 build:
   number: 0
