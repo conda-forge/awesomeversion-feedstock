@@ -1,11 +1,11 @@
-About awesomeversion
-====================
+About awesomeversion-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/awesomeversion-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ludeeus/awesomeversion
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/awesomeversion-feedstock/blob/main/LICENSE.txt)
 
 Summary: One version package to rule them all, One version package to find them, One version package to bring them all, and in the darkness bind them.
 
