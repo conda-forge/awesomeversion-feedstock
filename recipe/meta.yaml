@@ -1,7 +1,6 @@
 {% set name = "awesomeversion" %}
 {% set version = "23.11.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,23 +10,21 @@ source:
   sha256: 9146329196f0f045887de6c195730750f8f7a9302d1c149378db73ab5dc468f0
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.8,<4.0
+    - poetry-core >=1.0.0
     - pip
-    - python >=3.6
-    - poetry >=1.0.10
-    - poetry-core
   run:
-    - python >=3.6
+    - python >=3.8.0,<4.0.0
 
 test:
   imports:
     - awesomeversion
-    - awesomeversion.comparehandlers
   commands:
     - pip check
   requires:
@@ -35,17 +32,9 @@ test:
 
 about:
   home: https://github.com/ludeeus/awesomeversion
-  license: MIT
-  license_family: MIT
-  license_file: LICENCE.md
   summary: One version package to rule them all, One version package to find them, One version package to bring them all, and in the darkness bind them.
-  description: |
-    One version package to rule them all, One version package to find
-    them, One version package to bring them all, and in the darkness bind
-    them. Make anything a version object, and compare against a vast
-    section of other version formats.
-  doc_url: https://github.com/ludeeus/awesomeversion
-  dev_url: https://github.com/ludeeus/awesomeversion
+  license: MIT
+  license_file: LICENCE.md
 
 extra:
   recipe-maintainers:
