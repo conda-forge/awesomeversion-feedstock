@@ -1,5 +1,5 @@
 {% set name = "awesomeversion" %}
-{% set version = "24.6.0" %}
+{% set version = "25.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/awesomeversion-{{ version }}.tar.gz
-  sha256: aee7ccbaed6f8d84e0f0364080c7734a0166d77ea6ccfcc4900b38917f1efc71
+  sha256: d64c9f3579d2f60a5aa506a9dd0b38a74ab5f45e04800f943a547c1102280f31
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
